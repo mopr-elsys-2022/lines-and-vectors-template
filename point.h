@@ -12,7 +12,7 @@ struct Point
 };
 
 // this is for inputing a point
-std::istream& operator>>(std::istream& in, Point& p) {
+inline std::istream& operator>>(std::istream& in, Point& p) {
     in >> p.x;
     in >> p.y;
 	
@@ -20,7 +20,7 @@ std::istream& operator>>(std::istream& in, Point& p) {
 }
 
 // this is for printing a point
-std::ostream& operator<<(std::ostream& out, Point& p) {
+inline std::ostream& operator<<(std::ostream& out, Point& p) {
     out << "(" << p.x << ", " << p.y << ")";
     return out;
 }

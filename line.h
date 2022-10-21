@@ -20,22 +20,19 @@ public:
     Line parallel(const Point p);
     Line orthogonal(const Point p);
 
-    friend std::ostream& operator<<(std::ostream& out, const Line& l);
-    friend std::istream& operator>>(std::istream& in, Line& l);
+    friend std::ostream& operator<<(std::ostream& out, const Line& l)
+    {
+    	out << l.A << "x + "<< l.B << "y + "<< l.C << " = 0 ";
+    	return out;
+	}
+
+    friend std::istream& operator>>(std::istream& in, Line& l)
+    {
+    	in >> l.A;
+    	in >> l.B;
+    	in >> l.C;
+    	return in;
+	}
 };
-
-std::ostream& operator<<(std::ostream& out, const Line& l)
-{
-    out << l.A << "x + "<< l.B << "y + "<< l.C << " = 0 ";
-    return out;
-}
-
-std::istream& operator>>(std::istream& in, Line& l)
-{
-    in >> l.A;
-    in >> l.B;
-    in >> l.C;
-    return in;
-}
 
 #endif
