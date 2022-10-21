@@ -7,10 +7,10 @@ Line::Line(const Point p, const Vector& v) {}
 Line::Line(const Point p1, const Point p2) {}
 
 // TODO - checks if two lines a parallel to eachother
-bool Line::parallel(const Line& other) {}
+bool Line::are_parallel(const Line& other) {}
 
 // TODO - checks if two lines are orthogonal (perpendicular)
-bool Line::orthogonal(const Line& other) {}
+bool Line::is_orthogonal(const Line& other) {}
 
 // TODO - returns the vector that is colinear to the line
 Vector Line::colinear() {}

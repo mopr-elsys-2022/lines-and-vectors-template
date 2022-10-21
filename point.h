@@ -2,6 +2,7 @@
 #define POINT_H
 
 #include <fstream>
+#include <cmath>
 
 struct Point
 {
