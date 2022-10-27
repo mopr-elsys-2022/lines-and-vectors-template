@@ -12,7 +12,7 @@ void vector_methods_list()
 		 << " i - is_colinear - are vectors colinear" << endl
 		 << " l - length of vector" << endl
 		 << " d - dot_product of vectors" << endl
-		 << " p - parallelogram area" << endl
+		 << " a - area of triangle" << endl
 		 << " m - multifaceted example" << endl;
 }
 void lines_methods_list()
@@ -33,7 +33,7 @@ void vector_times();
 void vector_is();
 void vector_lenght();
 void vector_dot();
-void vector_parallelogram();
+void vector_area();
 void vector_multi();
 
 void line_constuctor(); 
@@ -65,9 +65,9 @@ int main()
 				case 'i': vector_is(); break;
 				case 'l': vector_lenght(); break;
 				case 'd': vector_dot(); break;
-				case 'p': vector_parallelogram(); break;
+				case 'a': vector_area(); break;
 				case 'm': vector_multi(); break;
-				default : cout << "Invalid input, try again.";
+				default : cout << "Invalid input, try again." << endl;
 			}
 		}
 		else if(object == 'l')
@@ -85,11 +85,11 @@ int main()
 				case 'o': line_orthogonal(); break;
 				case 'p': line_parallel(); break;
 				case 'l': line_line(); break;
-				default : cout << "Invalid input, try again.";
+				default : cout << "Invalid input, try again." << endl;
 			}
 		}
 		else if(object == 'e') break;
-		else cout << "Invalid input, try again.";
+		else cout << "Invalid input, try again." << endl;
 	}
 
 	cout << "Bye" << endl;
@@ -139,14 +139,13 @@ void vector_dot()
 	cout << v1.dot_product(v2) << endl;
 }
 
-void vector_parallelogram()
+void vector_area()
 {
 	Vector v1, v2;
 	cin >> v1 >> v2;
 	cout << area(v1, v2) << endl;
 }
 
-//questionable
 void vector_multi()
 {
 	Vector v1, v2;
@@ -171,6 +170,7 @@ void line_two_points()
 	cin >> p1 >> p2;
 	Line l(p1, p2);
 	cout << l << endl;
+}
 
 void line_are_parallel()
 {

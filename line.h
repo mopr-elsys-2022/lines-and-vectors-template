@@ -11,14 +11,14 @@ public:
     Line(const Point p, const Vector& v);
     Line(const Point p1, const Point p2);
 
-	bool are_parallel(const Line& other);
-    bool is_orthogonal(const Line& other);
+	bool are_parallel(const Line& other) const;
+    bool is_orthogonal(const Line& other) const;
 
-	Vector colinear();
-    Vector orthogonal();
+	Vector colinear() const;
+    Vector orthogonal() const;
 
-    Line parallel(const Point p);
-    Line orthogonal(const Point p);
+    Line parallel(const Point p) const;
+    Line orthogonal(const Point p) const;
 
     friend std::ostream& operator<<(std::ostream& out, const Line& l);
     friend std::istream& operator>>(std::istream& in, Line& l);

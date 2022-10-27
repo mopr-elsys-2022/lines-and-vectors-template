@@ -19,5 +19,5 @@ double Vector::length() const {}
 // TODO - returns the dot(scalar) product of the current vector and another
 int Vector::dot_product(const Vector& other) const {}
 
-// TODO - finds the area of a parallelogram (usporednik) given two vectors denoting its sides
+// TODO - finds the area of a triangle given two vectors denoting two of its sides
 int area(const Vector v1, const Vector v2) {}

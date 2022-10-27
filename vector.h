@@ -17,6 +17,7 @@ public:
     double length() const;
     int dot_product(const Vector& other) const;
 
+    friend class Line;
     friend std::ostream& operator<<(std::ostream& os, const Vector& c);
     friend std::istream& operator>>(std::istream& in, Vector& v);
 };
